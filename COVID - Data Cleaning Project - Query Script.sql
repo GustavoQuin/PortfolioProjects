@@ -118,7 +118,7 @@ FROM [Portfolio Project COVID]..CovidDeaths
 where continent is not null
 Order by 1,2
 
--- Cambiamos a Covid Vaccinations y la unimos con Covid Deaths, que ya estuvimos analizando
+-- Join Covid Vaccinations and Covid Deaths
 
 Select *
 From [Portfolio Project COVID]..CovidDeaths dea
@@ -142,7 +142,7 @@ order by vac.new_vaccinations desc
 
 -- Rolling People Vaccinated (it adds up vaccinated people by location)
 
---We use CTE or Common Table Expression (temporary table)
+--We use CTE
 
 With PopvsVac (continent, location, date, population, new_vaccinations, RollingPeopleVaccinated)
 as
